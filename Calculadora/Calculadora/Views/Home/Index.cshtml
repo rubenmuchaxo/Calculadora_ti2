@@ -3,6 +3,90 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Calculadora</h1>
 </div>
+
+
+
+<form method="post">
+    @* variáveis auxiliares *@
+    <input type="hidden" value="@ViewBag.PrimeiroOperador" name="primeiroOperador" />
+    <input type="hidden" value="@ViewBag.PrimeiroOperando" name="primeiroOperando" />
+    <input type="hidden" value="@ViewBag.Operador" name="operador" />
+    <input type="hidden" value="@ViewBag.LimpaVisor" name="limpaVisor" />
+
+
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" name="visor" value="@ViewBag.Visor" readonly="readonly" style="text-align:right;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="C" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="+/-" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value=":" name="botao" class="btn" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="7" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="8" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="9" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="x" name="botao" class="btn" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="4" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="5" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="6" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="-" name="botao" class="btn" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="1" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="2" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="3" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="+" name="botao" class="btn" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="0" name="botao" class="btn" />
+            </td>
+            <td>
+                <input type="submit" value="," name="botao" class="btn" />
+            </td>
+            <td colspan="2">
+                <input type="submit" value="=" name="botao" class="btn" />
+            </td>
+        </tr>
+    </table>
+
+
+</form>
